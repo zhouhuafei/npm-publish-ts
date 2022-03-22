@@ -1,6 +1,6 @@
 ## 把ts打包成js
-* 把ts打包成js需要使用tsc命令。
-* 使用tsc命令需要`typescript`包和`tsconfig.json`配置文件。
+* 把ts打包成js需要使用babel命令。
+* 使用babel命令需要`@babel/cli`包和`@babel/preset-typescript`包以及`@babel/preset-env`包（包含`@babel/plugin-transform-modules-commonjs`包和`@babel/core`包）和`babel.config.js`配置文件。
 
 ## 使用ts写jest
 * 使用ts写jest需要`ts-jest`包和`jest.config.js`配置文件。

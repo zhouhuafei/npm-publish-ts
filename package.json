@@ -11,10 +11,11 @@
     "del": "ts-node ./scripts/del",
     "lint": "cross-env NODE_ENV=production eslint --ext .js,.ts ./",
     "fix": "cross-env NODE_ENV=production eslint --fix --ext .js,.ts ./",
-    "tsc": "tsc --p ./tsconfig.json",
+    "tsc": "tsc --p ./tsconfig.declaration.json",
     "test": "jest",
-    "dev": "npm run del && npm run tsc -- --watch",
-    "build": "npm run del && npm run tsc && npm run test",
+    "babel": "babel ./src --out-dir ./dist --extensions .ts",
+    "dev": "npm run del && npm run babel -- --watch",
+    "build": "npm run del && npm run babel && npm run tsc && npm run test",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "repository": {
@@ -29,6 +30,9 @@
   },
   "homepage": "https://github.com/zhouhuafei/npm-publish-ts#readme",
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
     "@types/jest": "^27.4.1",
