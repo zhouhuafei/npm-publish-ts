@@ -8,14 +8,16 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "del": "ts-node ./scripts/del",
     "lint": "cross-env NODE_ENV=production eslint --ext .js,.ts ./",
     "fix": "cross-env NODE_ENV=production eslint --fix --ext .js,.ts ./",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "del": "ts-node ./scripts/del",
+    "gulpDev": "cross-env NODE_ENV=development gulp -f ./gulpfile.ts",
+    "gulpBuild": "cross-env NODE_ENV=production gulp -f ./gulpfile.ts",
     "ts2dts": "ttsc --p ./tsconfig.ts2dts.json",
     "test": "jest",
-    "dev": "npm run del && cross-env NODE_ENV=development gulp -f ./gulpfile.ts",
-    "build": "npm run del && cross-env NODE_ENV=production gulp -f ./gulpfile.ts && npm run ts2dts && npm run test",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "dev": "npm run del && npm run gulpDev",
+    "build": "npm run del && npm run gulpBuild && npm run ts2dts && npm run test"
   },
   "repository": {
     "type": "git",
