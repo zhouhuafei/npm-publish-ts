@@ -31,7 +31,6 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
-    "@gulp-plugin/alias": "^2.2.2",
     "@types/gulp": "^4.0.9",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
@@ -46,6 +45,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
+    "gulp-ts-alias-fix": "^2.2.2",
     "gulp-typescript": "^6.0.0-alpha.1",
     "husky": "^7.0.4",
     "jest": "^27.5.1",

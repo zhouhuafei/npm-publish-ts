@@ -1,7 +1,7 @@
 import gulp from 'gulp'
 import ts from 'gulp-typescript'
 import tsconfig from './tsconfig.json'
-import alias from '@gulp-plugin/alias'
+import alias from 'gulp-ts-alias-fix'
 
 const src = './src'
 const dist = './dist'
