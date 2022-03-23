@@ -1,6 +1,6 @@
 ## 把ts打包成js
 * 把ts打包成js需要使用gulp命令。
-* 使用gulp命令需要`gulp-cli`包和`gulp`包以及`gulp-typescript`包和`gulpfile.ts`配置文件。
+* 使用gulp命令需要`gulp-cli`包和`gulp`包和`gulp-typescript`包和`gulpfile.ts`配置文件。
 
 ## 使用ts写jest
 * 使用ts写jest需要`ts-jest`包和`jest.config.js`配置文件。
