@@ -8,14 +8,7 @@
         "./src/*"
       ]
     },
-    "plugins": [
-      {
-        "transform": "typescript-transform-paths",
-        "afterDeclarations": true
-      }
-    ],
     "strict": true,
-    "declaration": true,
     "esModuleInterop": true,
     "resolveJsonModule": true
   },

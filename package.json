@@ -11,11 +11,11 @@
     "del": "ts-node ./scripts/del",
     "lint": "cross-env NODE_ENV=production eslint --ext .js,.ts ./",
     "fix": "cross-env NODE_ENV=production eslint --fix --ext .js,.ts ./",
-    "ttsc": "ttsc --p ./tsconfig.declaration.json",
+    "ts2dts": "ttsc --p ./tsconfig.ts2dts.json",
     "test": "jest",
     "babel": "babel ./src --out-dir ./dist --extensions .ts",
     "dev": "npm run del && npm run babel -- --watch",
-    "build": "npm run del && npm run babel && npm run ttsc && npm run test",
+    "build": "npm run del && npm run babel && npm run ts2dts && npm run test",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "repository": {
