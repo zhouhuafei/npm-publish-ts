@@ -8,15 +8,15 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "del": "ts-node ./scripts/del",
     "lint": "cross-env NODE_ENV=production eslint --ext .js,.ts ./",
     "fix": "cross-env NODE_ENV=production eslint --fix --ext .js,.ts ./",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "del": "ts-node ./scripts/del",
+    "babel": "babel ./src --out-dir ./dist --extensions .ts",
     "ts2dts": "ttsc --p ./tsconfig.ts2dts.json",
     "test": "jest",
-    "babel": "babel ./src --out-dir ./dist --extensions .ts",
     "dev": "npm run del && npm run babel -- --watch",
-    "build": "npm run del && npm run babel && npm run ts2dts && npm run test",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "build": "npm run del && npm run babel && npm run ts2dts && npm run test"
   },
   "repository": {
     "type": "git",
