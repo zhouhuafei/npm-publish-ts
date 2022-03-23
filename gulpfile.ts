@@ -5,13 +5,12 @@ import alias from '@gulp-plugin/alias'
 
 const src = './src'
 const dist = './dist'
-const rootDir = './'
 const isProduction = process.env.NODE_ENV === 'production'
 
 function ts2cjs () {
   return gulp.src(`${src}/**/*.ts`)
     .pipe(alias(tsconfig as any))
-    .pipe(ts({ rootDir, ...tsconfig.compilerOptions }))
+    .pipe(ts(tsconfig.compilerOptions))
     .pipe(gulp.dest(dist))
 }
 
