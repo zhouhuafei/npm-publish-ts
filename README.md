@@ -6,13 +6,15 @@
 * 配置alias需要`babel-plugin-module-resolver`包和`typescript-transform-paths`包。
 
 ## 使用ts写jest
-* 使用ts写jest需要`ts-jest`包和`jest.config.js`配置文件。
+* 使用ts写jest需要`ts-jest`包和`jest.config.ts`配置文件。
+* 让`jest`命令识别alias需要在`jest.config.ts`中配置`moduleNameMapper`。
 
 ## 删除dist目录
 * 删除dist目录需要`del`包。
 
 ## 直接运行ts
 * 直接运行ts需要`ts-node`包。
+* 让`ts-node`命令识别alias需要`tsconfig-paths`包。
 
 ## 限制`git commit`格式
 * 限制`git commit`格式需要`husky`包和`@commitlint/config-conventional`包和`commitlint.config.js`配置文件和`commit-msg`脚本文件。
