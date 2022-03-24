@@ -1,6 +1,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
     "plugins": [
       {
         "transform": "typescript-transform-paths",
@@ -9,5 +11,8 @@
     ],
     "declaration": true,
     "emitDeclarationOnly": true
-  }
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
 }
