@@ -1,11 +1,18 @@
 import gulp from 'gulp'
 import ts from 'gulp-typescript'
-import tsconfig from './tsconfig.json'
+import tsconfig1 from './tsconfig.json'
+import tsconfig2 from './tsconfig.ts2js.json'
 import alias from 'gulp-ts-alias-fix'
 
 const src = './src'
 const dist = './dist'
 const isProduction = process.env.NODE_ENV === 'production'
+const tsconfig = {
+  compilerOptions: {
+    ...tsconfig2.compilerOptions,
+    ...tsconfig1.compilerOptions
+  }
+}
 
 function ts2cjs () {
   return gulp.src(`${src}/**/*.ts`)
