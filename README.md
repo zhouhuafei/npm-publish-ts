@@ -1,6 +1,6 @@
 ## 把ts打包成js
 * 把ts打包成js需要使用`babel`命令。
-* 使用`babel`命令需要`@babel/cli`包和`@babel/preset-typescript`包和`@babel/preset-env`包（包含`@babel/plugin-transform-modules-commonjs`包和`@babel/core`包）和`babel.config.js`配置文件。
+* 使用`babel`命令需要`@babel/cli`包和`@babel/preset-env`包（含`@babel/core`包和`@babel/plugin-transform-modules-commonjs`包）和`@babel/plugin-transform-runtime`包和`@babel/plugin-transform-typescript`包和`babel.config.js`配置文件。
 
 ## 配置alias
 * 配置alias需要`babel-plugin-module-resolver`包和`typescript-transform-paths`包。
