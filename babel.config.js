@@ -15,7 +15,6 @@ module.exports = {
         }
       }
     ],
-    '@babel/plugin-transform-runtime',
     '@babel/plugin-transform-typescript',
     '@babel/plugin-transform-modules-commonjs'
   ]
