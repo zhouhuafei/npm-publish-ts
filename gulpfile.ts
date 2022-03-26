@@ -14,7 +14,7 @@ const tsconfig = {
   }
 }
 
-function ts2cjs () {
+function ts2js () {
   return gulp.src(`${src}/**/*.ts`)
     .pipe(alias(tsconfig as any))
     .pipe(ts(tsconfig.compilerOptions))
@@ -22,10 +22,10 @@ function ts2cjs () {
 }
 
 function watcher () {
-  gulp.watch(`${src}/**/*.ts`, gulp.series(ts2cjs))
+  gulp.watch(`${src}/**/*.ts`, gulp.series(ts2js))
 }
 
-const series: Array<any> = [ts2cjs]
+const series: Array<any> = [ts2js]
 if (!isProduction) {
   series.push(watcher)
 }
