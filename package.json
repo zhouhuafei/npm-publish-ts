@@ -53,6 +53,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.3",
     "gulp-cli": "^2.3.0",
     "gulp-ts-alias-fix": "^2.2.2",
     "gulp-typescript": "^6.0.0-alpha.1",

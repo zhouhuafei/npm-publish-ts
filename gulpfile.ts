@@ -1,4 +1,5 @@
 import gulp from 'gulp'
+import changed from 'gulp-changed'
 import ts from 'gulp-typescript'
 import tsconfig1 from './tsconfig.json'
 import tsconfig2 from './tsconfig.ts2js.json'
@@ -16,6 +17,7 @@ const tsconfig = {
 
 function ts2js () {
   return gulp.src(`${src}/**/*.ts`)
+    .pipe(changed(dist, { extension: '.js' }))
     .pipe(alias(tsconfig as PluginOptions))
     .pipe(ts(tsconfig.compilerOptions))
     .pipe(gulp.dest(dist))
