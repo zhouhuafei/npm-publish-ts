@@ -57,7 +57,7 @@
     "gulp-cli": "^2.3.0",
     "gulp-ts-alias-fix": "^2.2.2",
     "gulp-typescript": "^6.0.0-alpha.1",
-    "husky": "^7.0.4",
+    "husky": "^8.0.3",
     "jest": "^27.5.1",
     "lint-staged": "^12.3.4",
     "ts-jest": "^27.1.3",
